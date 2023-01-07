@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1177</width>
-    <height>786</height>
+    <width>1164</width>
+    <height>783</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -117,6 +117,12 @@ QLabel{
        </item>
        <item>
         <widget class="QFrame" name="frame_menu">
+         <property name="minimumSize">
+          <size>
+           <width>200</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">QFrame{
 	background-color: rgb(62, 62, 62);
@@ -160,8 +166,8 @@ QToolBox::tab{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>177</width>
-               <height>644</height>
+               <width>182</width>
+               <height>641</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -325,8 +331,8 @@ QPushButton{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>177</width>
-               <height>644</height>
+               <width>182</width>
+               <height>641</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -404,18 +410,6 @@ QPushButton{
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <property name="leftMargin">
-           <number>5</number>
-          </property>
-          <property name="topMargin">
-           <number>5</number>
-          </property>
-          <property name="rightMargin">
-           <number>5</number>
-          </property>
-          <property name="bottomMargin">
-           <number>5</number>
-          </property>
           <item alignment="Qt::AlignLeft">
            <widget class="QPushButton" name="button_toggle">
             <property name="layoutDirection">
@@ -442,11 +436,26 @@ color: rgb(162, 162, 162);</string>
           </item>
           <item>
            <widget class="QLabel" name="label_header">
+            <property name="maximumSize">
+             <size>
+              <width>559</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(162, 162, 162);</string>
             </property>
             <property name="text">
              <string>Sistema de cadastro</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="margin">
+             <number>5</number>
+            </property>
+            <property name="indent">
+             <number>0</number>
             </property>
            </widget>
           </item>
@@ -586,7 +595,7 @@ color: rgb(162, 162, 162);</string>
 </string>
             </property>
             <property name="currentIndex">
-             <number>3</number>
+             <number>2</number>
             </property>
             <widget class="QWidget" name="page_home">
              <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -610,7 +619,7 @@ color: rgb(162, 162, 162);</string>
                  <enum>QTabWidget::Rounded</enum>
                 </property>
                 <property name="currentIndex">
-                 <number>0</number>
+                 <number>1</number>
                 </property>
                 <property name="elideMode">
                  <enum>Qt::ElideRight</enum>
@@ -650,6 +659,22 @@ color: rgb(162, 162, 162);</string>
                       <verstretch>0</verstretch>
                      </sizepolicy>
                     </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>887</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QLineEdit{
+	background-color: rgb(255,255,255);
+	font: 13pt &quot;Helvetica Neue&quot;;
+}
+
+QFrame{
+	background-color: rgb(63,63,63);
+}</string>
+                    </property>
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
                     </property>
@@ -657,13 +682,85 @@ color: rgb(162, 162, 162);</string>
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QGridLayout" name="gridLayout">
-                     <item row="0" column="0">
-                      <widget class="QLineEdit" name="lineEdit_1_cnpj">
+                     <item row="3" column="2">
+                      <widget class="QLineEdit" name="lineEdit_9_cep">
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
                        <property name="placeholderText">
-                        <string>CNPJ</string>
+                        <string>CEP</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1" colspan="2">
+                      <widget class="QLineEdit" name="lineEdit_11_email">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>E-MAIL</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QLineEdit" name="lineEdit_6_bairro">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>BAIRRO</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLineEdit" name="lineEdit_5_complemento">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>COMPLEMENTO</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLineEdit" name="lineEdit_4_numero">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>NÚMERO</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLineEdit" name="lineEdit_8_uf">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>UF</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLineEdit" name="lineEdit_7_municipio">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string>MUNICÍPIO</string>
                        </property>
                       </widget>
                      </item>
@@ -687,75 +784,13 @@ color: rgb(162, 162, 162);</string>
                        </property>
                       </widget>
                      </item>
-                     <item row="2" column="0">
-                      <widget class="QLineEdit" name="lineEdit_4_numero">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
+                     <item row="0" column="0">
+                      <widget class="QLineEdit" name="lineEdit_1_cnpj">
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
                        <property name="placeholderText">
-                        <string>NÚMERO</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="1">
-                      <widget class="QLineEdit" name="lineEdit_5_complemento">
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>COMPLEMENTO</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="2">
-                      <widget class="QLineEdit" name="lineEdit_6_bairro">
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>BAIRRO</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="0">
-                      <widget class="QLineEdit" name="lineEdit_7_municipio">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>MUNICÍPIO</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="1">
-                      <widget class="QLineEdit" name="lineEdit_8_uf">
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>UF</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="3" column="2">
-                      <widget class="QLineEdit" name="lineEdit_9_cep">
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>CEP</string>
+                        <string>CNPJ</string>
                        </property>
                       </widget>
                      </item>
@@ -775,21 +810,21 @@ color: rgb(162, 162, 162);</string>
                        </property>
                       </widget>
                      </item>
-                     <item row="4" column="1" colspan="2">
-                      <widget class="QLineEdit" name="lineEdit_11_email">
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="placeholderText">
-                        <string>E-MAIL</string>
-                       </property>
-                      </widget>
-                     </item>
                     </layout>
                    </widget>
                   </item>
                   <item>
                    <widget class="QFrame" name="frame_page_cadastrar">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton:hover{
+	border-radius: 5px;
+	background-color: rgb(62, 62, 62);
+}
+
+QPushButton{
+	color: rgb(255, 255, 255)
+}</string>
+                    </property>
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
                     </property>
@@ -797,8 +832,44 @@ color: rgb(162, 162, 162);</string>
                      <enum>QFrame::Raised</enum>
                     </property>
                     <layout class="QHBoxLayout" name="horizontalLayout">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <property name="leftMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>5</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>5</number>
+                     </property>
                      <item>
                       <widget class="QPushButton" name="button_confirmar">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>150</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
                        <property name="text">
                         <string>CONFIRMAR</string>
                        </property>
@@ -806,6 +877,27 @@ color: rgb(162, 162, 162);</string>
                      </item>
                      <item>
                       <widget class="QPushButton" name="button_cancelar">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>150</width>
+                         <height>150</height>
+                        </size>
+                       </property>
+                       <property name="cursor">
+                        <cursorShape>PointingHandCursor</cursorShape>
+                       </property>
                        <property name="text">
                         <string>CANCELAR</string>
                        </property>
@@ -832,6 +924,34 @@ color: rgb(162, 162, 162);</string>
                    <layout class="QHBoxLayout" name="horizontalLayout_7">
                     <item>
                      <widget class="QTableWidget" name="tableWidget">
+                      <property name="minimumSize">
+                       <size>
+                        <width>700</width>
+                        <height>500</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="baseSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QHeaderView::section{
+	background-color: rgb(63,63,63);
+	color: rgb(255,255,255)
+}
+
+QTableWidget{
+	
+}</string>
+                      </property>
                       <column>
                        <property name="text">
                         <string>NOME</string>
@@ -881,6 +1001,12 @@ color: rgb(162, 162, 162);</string>
                     </item>
                     <item>
                      <widget class="QFrame" name="frame">
+                      <property name="minimumSize">
+                       <size>
+                        <width>150</width>
+                        <height>500</height>
+                       </size>
+                      </property>
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -890,6 +1016,26 @@ color: rgb(162, 162, 162);</string>
                       <layout class="QVBoxLayout" name="verticalLayout_7">
                        <item>
                         <widget class="QPushButton" name="button_excel">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton:hover{
+	border-radius: 5px;
+	background-color: rgb(62, 62, 62);
+}
+
+QPushButton{
+	color: rgb(255, 255, 255)
+}
+</string>
+                         </property>
                          <property name="text">
                           <string>Gerar excel</string>
                          </property>
@@ -897,6 +1043,26 @@ color: rgb(162, 162, 162);</string>
                        </item>
                        <item>
                         <widget class="QPushButton" name="button_alterar">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton:hover{
+	border-radius: 5px;
+	background-color: rgb(62, 62, 62);
+}
+
+QPushButton{
+	color: rgb(255, 255, 255)
+}
+</string>
+                         </property>
                          <property name="text">
                           <string>Alterar</string>
                          </property>
@@ -904,6 +1070,26 @@ color: rgb(162, 162, 162);</string>
                        </item>
                        <item>
                         <widget class="QPushButton" name="button_excluir">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>30</height>
+                          </size>
+                         </property>
+                         <property name="cursor">
+                          <cursorShape>PointingHandCursor</cursorShape>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QPushButton:hover{
+	border-radius: 5px;
+	background-color: rgb(62, 62, 62);
+}
+
+QPushButton{
+	color: rgb(255, 255, 255)
+}
+</string>
+                         </property>
                          <property name="text">
                           <string>Excluir</string>
                          </property>
@@ -953,14 +1139,14 @@ color: rgb(162, 162, 162);</string>
                  <item>
                   <widget class="QLabel" name="label">
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/whatsApp.png&quot;/&gt;(44)98862-0946&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/whatsApp.png&quot;/&gt;&lt;span style=&quot; font-size:24pt; vertical-align:super;&quot;&gt;(44)98862-0946&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_2">
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/email.png&quot;/&gt;marcelolemesgalli@hotmail.com&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/email.png&quot;/&gt;&lt;span style=&quot; font-size:24pt; vertical-align:super;&quot;&gt;marcelolemesgalli@hotmail.com&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>

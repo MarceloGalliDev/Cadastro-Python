@@ -1,2 +1,4 @@
->> Qt Desing
-- sizePolicy: usado para expandir o tamanho do frame
+>> Qt Desing CSS styles
+- color
+- background-color
+- border-radius
