@@ -155,8 +155,7 @@ QToolBox::tab{
           <item>
            <widget class="QToolBox" name="box_menu">
             <property name="styleSheet">
-             <string notr="true">
-</string>
+             <string notr="true"/>
             </property>
             <property name="currentIndex">
              <number>0</number>
@@ -331,8 +330,8 @@ QPushButton{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>182</width>
-               <height>641</height>
+               <width>85</width>
+               <height>116</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -423,7 +422,7 @@ color: rgb(162, 162, 162);</string>
              <string/>
             </property>
             <property name="icon">
-             <iconset resource="icons/icons_.qrc">
+             <iconset>
               <normaloff>:/icons/menu2.png</normaloff>:/icons/menu2.png</iconset>
             </property>
             <property name="iconSize">
@@ -1274,7 +1273,7 @@ QPushButton{
   </widget>
  </widget>
  <resources>
-  <include location="icons/icons_.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>
