@@ -330,8 +330,8 @@ QPushButton{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>85</width>
-               <height>116</height>
+               <width>182</width>
+               <height>641</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -1135,17 +1135,17 @@ QPushButton{
                  <enum>QFrame::Raised</enum>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_10">
-                 <item>
+                 <item alignment="Qt::AlignHCenter">
                   <widget class="QLabel" name="label">
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/whatsApp.png&quot;/&gt;&lt;span style=&quot; font-size:24pt; vertical-align:super;&quot;&gt;(44)98862-0946&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/icons/whatsApp.png&quot;/&gt;&lt;span style=&quot; font-size:24pt; vertical-align:super;&quot;&gt;(44)98862-0946&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_2">
                    <property name="text">
-                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;img src=&quot;:/icons/email.png&quot;/&gt;&lt;span style=&quot; font-size:24pt; vertical-align:super;&quot;&gt;marcelolemesgalli@hotmail.com&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/icons/icons/email.png&quot;/&gt;&lt;span style=&quot; font-size:24pt; vertical-align:super;&quot;&gt;marcelolemesgalli@hotmail.com&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
