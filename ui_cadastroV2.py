@@ -17,9 +17,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QMainWindow,
-    QPushButton, QSizePolicy, QSpacerItem, QStackedWidget,
-    QTabWidget, QTableWidget, QTableWidgetItem, QToolBox,
-    QVBoxLayout, QWidget)
+    QPushButton, QSizePolicy, QSpacerItem, QTabWidget,
+    QTableWidget, QTableWidgetItem, QToolBox, QVBoxLayout,
+    QWidget)
 import icons_rc
 
 class Ui_MainWindow(object):
@@ -202,8 +202,12 @@ class Ui_MainWindow(object):
         self.frame_main_content.setObjectName(u"frame_main_content")
         self.frame_main_content.setMinimumSize(QSize(0, 0))
         self.frame_main_content.setMaximumSize(QSize(800, 600))
-        self.frame_main_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
-"border-radius: 10px;")
+        self.frame_main_content.setStyleSheet(u"QFrame{\n"
+"	background-color: rgb(32,89,79);\n"
+"	border-radius: 10px;\n"
+"}\n"
+"\n"
+"")
         self.frame_main_content.setFrameShape(QFrame.StyledPanel)
         self.frame_main_content.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.frame_main_content)
@@ -242,21 +246,49 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.frame_content.sizePolicy().hasHeightForWidth())
         self.frame_content.setSizePolicy(sizePolicy)
         self.frame_content.setStyleSheet(u"background-color: rgb(242, 98, 15);\n"
-"border-radius: 10px;")
+"\n"
+"\n"
+"\n"
+"\n"
+"")
         self.frame_content.setFrameShape(QFrame.StyledPanel)
         self.frame_content.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_8 = QHBoxLayout(self.frame_content)
         self.horizontalLayout_8.setSpacing(0)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(5, 5, 5, 5)
-        self.stackedWidget_content = QStackedWidget(self.frame_content)
-        self.stackedWidget_content.setObjectName(u"stackedWidget_content")
-        self.stackedWidget_content.setStyleSheet(u"background-color: rgb(254, 158, 49);")
-        self.page_1_content = QWidget()
-        self.page_1_content.setObjectName(u"page_1_content")
-        self.horizontalLayout_9 = QHBoxLayout(self.page_1_content)
+        self.tabWidget_content = QTabWidget(self.frame_content)
+        self.tabWidget_content.setObjectName(u"tabWidget_content")
+        self.tabWidget_content.setMinimumSize(QSize(0, 0))
+        self.tabWidget_content.setTabletTracking(False)
+        self.tabWidget_content.setContextMenuPolicy(Qt.DefaultContextMenu)
+        self.tabWidget_content.setStyleSheet(u"QTabBar::tab{\n"
+"	background-color: rgb(242, 98, 15);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected{\n"
+"	background-color: rgb(254, 158,49);\n"
+"}\n"
+"\n"
+"QWidget{\n"
+"	background-color: rgb(254, 158,49);\n"
+"}\n"
+"\n"
+"")
+        self.tabWidget_content.setElideMode(Qt.ElideRight)
+        self.tabWidget_content.setDocumentMode(False)
+        self.tabWidget_contentPage1 = QWidget()
+        self.tabWidget_contentPage1.setObjectName(u"tabWidget_contentPage1")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy1.setHorizontalStretch(100)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.tabWidget_contentPage1.sizePolicy().hasHeightForWidth())
+        self.tabWidget_contentPage1.setSizePolicy(sizePolicy1)
+        self.tabWidget_contentPage1.setMinimumSize(QSize(0, 0))
+        self.tabWidget_contentPage1.setStyleSheet(u"")
+        self.horizontalLayout_9 = QHBoxLayout(self.tabWidget_contentPage1)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.frame_1_content = QFrame(self.page_1_content)
+        self.frame_1_content = QFrame(self.tabWidget_contentPage1)
         self.frame_1_content.setObjectName(u"frame_1_content")
         self.frame_1_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
@@ -272,23 +304,44 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9.addWidget(self.frame_1_content)
 
-        self.stackedWidget_content.addWidget(self.page_1_content)
-        self.page_2_content = QWidget()
-        self.page_2_content.setObjectName(u"page_2_content")
-        self.horizontalLayout_16 = QHBoxLayout(self.page_2_content)
+        self.tabWidget_content.addTab(self.tabWidget_contentPage1, "")
+        self.tabWidget_contentPage2 = QWidget()
+        self.tabWidget_contentPage2.setObjectName(u"tabWidget_contentPage2")
+        self.tabWidget_contentPage2.setStyleSheet(u"QWidget::tab{\n"
+"	background-color: rgb(254, 158, 49);\n"
+"	color: rgb(0,0,0,);\n"
+"}\n"
+"\n"
+"QWidget{\n"
+"	background-color: rgb(254, 158, 49);\n"
+"	color: rgb(0,0,0,);\n"
+"}")
+        self.horizontalLayout_16 = QHBoxLayout(self.tabWidget_contentPage2)
         self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.tabWidget = QTabWidget(self.page_2_content)
+        self.tabWidget = QTabWidget(self.tabWidget_contentPage2)
         self.tabWidget.setObjectName(u"tabWidget")
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
         self.tabWidget.setMinimumSize(QSize(0, 0))
-        self.tabWidget.setStyleSheet(u"background-color: rgb(32,89,79);\n"
-"border-radius: 0px;\n"
+        self.tabWidget.setLayoutDirection(Qt.LeftToRight)
+        self.tabWidget.setStyleSheet(u"QTabBar::tab{\n"
+"	background-color: rgb(254, 158,49);\n"
+"}\n"
+"\n"
+"QTabBar::tab:selected{\n"
+"	background-color: rgb(32,89,79);\n"
+"}\n"
+"\n"
+"QWidget{\n"
+"	background-color: rgb(32,89,79);\n"
+"}\n"
+"\n"
+"\n"
 "")
         self.tabWidget.setTabShape(QTabWidget.Rounded)
         self.tabWidget.setElideMode(Qt.ElideLeft)
         self.tabWidget.setUsesScrollButtons(False)
-        self.tabWidget.setDocumentMode(True)
+        self.tabWidget.setDocumentMode(False)
         self.tabWidget.setTabsClosable(False)
         self.tabWidget.setMovable(False)
         self.tabWidget.setTabBarAutoHide(False)
@@ -330,11 +383,11 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName(u"gridLayout")
         self.lineEdit = QLineEdit(self.frame)
         self.lineEdit.setObjectName(u"lineEdit")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
-        self.lineEdit.setSizePolicy(sizePolicy1)
+        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
+        self.lineEdit.setSizePolicy(sizePolicy2)
         self.lineEdit.setMinimumSize(QSize(0, 40))
         font1 = QFont()
         font1.setPointSize(18)
@@ -355,8 +408,8 @@ class Ui_MainWindow(object):
 
         self.lineEdit_3 = QLineEdit(self.frame)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
-        sizePolicy1.setHeightForWidth(self.lineEdit_3.sizePolicy().hasHeightForWidth())
-        self.lineEdit_3.setSizePolicy(sizePolicy1)
+        sizePolicy2.setHeightForWidth(self.lineEdit_3.sizePolicy().hasHeightForWidth())
+        self.lineEdit_3.setSizePolicy(sizePolicy2)
         self.lineEdit_3.setMinimumSize(QSize(0, 40))
         self.lineEdit_3.setFont(font1)
         self.lineEdit_3.setStyleSheet(u"background-color: rgb(136,191,181);")
@@ -494,7 +547,8 @@ class Ui_MainWindow(object):
         __qtablewidgetitem10 = QTableWidgetItem()
         self.tableWidget.setHorizontalHeaderItem(10, __qtablewidgetitem10)
         self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setStyleSheet(u"gridline-color: rgb(255,255,255);\n"
+        self.tableWidget.setStyleSheet(u"color: rgb(0,0,0);\n"
+"background-color: rgb(255,255,255);\n"
 "")
 
         self.horizontalLayout_15.addWidget(self.tableWidget)
@@ -567,12 +621,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_16.addWidget(self.tabWidget)
 
-        self.stackedWidget_content.addWidget(self.page_2_content)
-        self.page_3_content = QWidget()
-        self.page_3_content.setObjectName(u"page_3_content")
-        self.horizontalLayout_14 = QHBoxLayout(self.page_3_content)
+        self.tabWidget_content.addTab(self.tabWidget_contentPage2, "")
+        self.tabWidget_contentPage3 = QWidget()
+        self.tabWidget_contentPage3.setObjectName(u"tabWidget_contentPage3")
+        self.horizontalLayout_14 = QHBoxLayout(self.tabWidget_contentPage3)
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.frame_3_content = QFrame(self.page_3_content)
+        self.frame_3_content = QFrame(self.tabWidget_contentPage3)
         self.frame_3_content.setObjectName(u"frame_3_content")
         self.frame_3_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
@@ -582,11 +636,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_13.setObjectName(u"horizontalLayout_13")
         self.label_4 = QLabel(self.frame_3_content)
         self.label_4.setObjectName(u"label_4")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
-        sizePolicy2.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
-        self.label_4.setSizePolicy(sizePolicy2)
+        sizePolicy3 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Preferred)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.label_4.sizePolicy().hasHeightForWidth())
+        self.label_4.setSizePolicy(sizePolicy3)
         self.label_4.setStyleSheet(u"color: rgb(255,255,255);")
         self.label_4.setTextFormat(Qt.AutoText)
         self.label_4.setAlignment(Qt.AlignCenter)
@@ -597,12 +651,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.frame_3_content)
 
-        self.stackedWidget_content.addWidget(self.page_3_content)
-        self.page_4_content = QWidget()
-        self.page_4_content.setObjectName(u"page_4_content")
-        self.horizontalLayout_12 = QHBoxLayout(self.page_4_content)
+        self.tabWidget_content.addTab(self.tabWidget_contentPage3, "")
+        self.tabWidget_contentPage4 = QWidget()
+        self.tabWidget_contentPage4.setObjectName(u"tabWidget_contentPage4")
+        self.horizontalLayout_12 = QHBoxLayout(self.tabWidget_contentPage4)
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
-        self.frame_4_content = QFrame(self.page_4_content)
+        self.frame_4_content = QFrame(self.tabWidget_contentPage4)
         self.frame_4_content.setObjectName(u"frame_4_content")
         self.frame_4_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
@@ -619,9 +673,9 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_12.addWidget(self.frame_4_content)
 
-        self.stackedWidget_content.addWidget(self.page_4_content)
+        self.tabWidget_content.addTab(self.tabWidget_contentPage4, "")
 
-        self.horizontalLayout_8.addWidget(self.stackedWidget_content)
+        self.horizontalLayout_8.addWidget(self.tabWidget_content)
 
 
         self.verticalLayout_3.addWidget(self.frame_content)
@@ -658,7 +712,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.stackedWidget_content.setCurrentIndex(1)
+        self.tabWidget_content.setCurrentIndex(1)
         self.tabWidget.setCurrentIndex(0)
 
 
@@ -677,6 +731,7 @@ class Ui_MainWindow(object):
         self.pushButton_5.setText("")
         self.label_header_title.setText(QCoreApplication.translate("MainWindow", u"ImovCad - Cadastro de im\u00f3veis", None))
         self.label_1_content.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/icons/logo4.png\"/></p></body></html>", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage1), QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">CADASTRO</span></p></body></html>", None))
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CNPJ", None))
         self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Raz\u00e3o Social", None))
@@ -718,8 +773,11 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Lista", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage2), QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/icons/whatsApp.png\"/><span style=\" font-size:24pt; vertical-align:super;\">(44)99999-9999</span></p><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/icons/icons/Youtube.png\"/><span style=\" font-size:18pt;\"/><span style=\" font-size:24pt; vertical-align:super;\">/marcelogalli</span></p><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/icons/icons/email.png\"/><span style=\" font-size:24pt; vertical-align:super;\">marcelolemesgalli@hotmail.com</span></p></body></html>", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage3), QCoreApplication.translate("MainWindow", u"Contatos", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Empresa criada para solu\u00e7\u00e3o de agilidade em processos de uma empresa!</span></p></body></html>", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage4), QCoreApplication.translate("MainWindow", u"Sobre", None))
         self.label_footer.setText(QCoreApplication.translate("MainWindow", u"Created by Galli, Marcelo L. \u24c7", None))
     # retranslateUi
 

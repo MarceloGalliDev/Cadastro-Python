@@ -1,7 +1,7 @@
 from PySide6.QtCore import QCoreApplication
 from PySide6.QtWidgets import (QApplication, QMainWindow)
 from PySide6.QtGui import QIcon
-from ui_main import Ui_MainWindow
+from ui_cadastroV2 import Ui_MainWindow
 import sys
 
 class MainWindow(QMainWindow, Ui_MainWindow):

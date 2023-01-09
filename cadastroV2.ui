@@ -390,8 +390,12 @@ QPushButton:hover{
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(32,89,79);
-border-radius: 10px;</string>
+          <string notr="true">QFrame{
+	background-color: rgb(32,89,79);
+	border-radius: 10px;
+}
+
+</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -468,7 +472,11 @@ border-radius: 10px;</string>
             </property>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(242, 98, 15);
-border-radius: 10px;</string>
+
+
+
+
+</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
@@ -493,14 +501,62 @@ border-radius: 10px;</string>
               <number>5</number>
              </property>
              <item>
-              <widget class="QStackedWidget" name="stackedWidget_content">
+              <widget class="QTabWidget" name="tabWidget_content">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="tabletTracking">
+                <bool>false</bool>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::DefaultContextMenu</enum>
+               </property>
                <property name="styleSheet">
-                <string notr="true">background-color: rgb(254, 158, 49);</string>
+                <string notr="true">QTabBar::tab{
+	background-color: rgb(242, 98, 15);
+}
+
+QTabBar::tab:selected{
+	background-color: rgb(254, 158,49);
+}
+
+QWidget{
+	background-color: rgb(254, 158,49);
+}
+
+</string>
                </property>
                <property name="currentIndex">
                 <number>1</number>
                </property>
-               <widget class="QWidget" name="page_1_content">
+               <property name="elideMode">
+                <enum>Qt::ElideRight</enum>
+               </property>
+               <property name="documentMode">
+                <bool>false</bool>
+               </property>
+               <widget class="QWidget" name="tabWidget_contentPage1">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>100</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true"/>
+                </property>
+                <attribute name="title">
+                 <string>Home</string>
+                </attribute>
                 <layout class="QHBoxLayout" name="horizontalLayout_9">
                  <item>
                   <widget class="QFrame" name="frame_1_content">
@@ -527,7 +583,21 @@ border-radius: 10px;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_2_content">
+               <widget class="QWidget" name="tabWidget_contentPage2">
+                <property name="styleSheet">
+                 <string notr="true">QWidget::tab{
+	background-color: rgb(254, 158, 49);
+	color: rgb(0,0,0,);
+}
+
+QWidget{
+	background-color: rgb(254, 158, 49);
+	color: rgb(0,0,0,);
+}</string>
+                </property>
+                <attribute name="title">
+                 <string>Cadastrar</string>
+                </attribute>
                 <layout class="QHBoxLayout" name="horizontalLayout_16">
                  <item>
                   <widget class="QTabWidget" name="tabWidget">
@@ -543,9 +613,23 @@ border-radius: 10px;</string>
                      <height>0</height>
                     </size>
                    </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                   </property>
                    <property name="styleSheet">
-                    <string notr="true">background-color: rgb(32,89,79);
-border-radius: 0px;
+                    <string notr="true">QTabBar::tab{
+	background-color: rgb(254, 158,49);
+}
+
+QTabBar::tab:selected{
+	background-color: rgb(32,89,79);
+}
+
+QWidget{
+	background-color: rgb(32,89,79);
+}
+
+
 </string>
                    </property>
                    <property name="tabShape">
@@ -561,7 +645,7 @@ border-radius: 0px;
                     <bool>false</bool>
                    </property>
                    <property name="documentMode">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="tabsClosable">
                     <bool>false</bool>
@@ -1014,7 +1098,8 @@ border-radius: 0px;
                         <item>
                          <widget class="QTableWidget" name="tableWidget">
                           <property name="styleSheet">
-                           <string notr="true">gridline-color: rgb(255,255,255);
+                           <string notr="true">color: rgb(0,0,0);
+background-color: rgb(255,255,255);
 </string>
                           </property>
                           <column>
@@ -1192,7 +1277,10 @@ QPushButton:hover{
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_3_content">
+               <widget class="QWidget" name="tabWidget_contentPage3">
+                <attribute name="title">
+                 <string>Contatos</string>
+                </attribute>
                 <layout class="QHBoxLayout" name="horizontalLayout_14">
                  <item>
                   <widget class="QFrame" name="frame_3_content">
@@ -1237,7 +1325,10 @@ border-radius: 10px;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page_4_content">
+               <widget class="QWidget" name="tabWidget_contentPage4">
+                <attribute name="title">
+                 <string>Sobre</string>
+                </attribute>
                 <layout class="QHBoxLayout" name="horizontalLayout_12">
                  <item>
                   <widget class="QFrame" name="frame_4_content">
