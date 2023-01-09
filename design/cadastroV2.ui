@@ -128,7 +128,15 @@ QToolBox::tab:hover{
             <property name="currentIndex">
              <number>0</number>
             </property>
-            <widget class="QWidget" name="toolBoxPage1" native="true">
+            <widget class="QWidget" name="toolBoxPage1">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>176</width>
+               <height>508</height>
+              </rect>
+             </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
@@ -319,7 +327,15 @@ QPushButton:hover{
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="toolBoxPage2" native="true">
+            <widget class="QWidget" name="toolBoxPage2">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>176</width>
+               <height>508</height>
+              </rect>
+             </property>
              <property name="cursor">
               <cursorShape>PointingHandCursor</cursorShape>
              </property>
@@ -478,6 +494,9 @@ border-radius: 10px;</string>
              </property>
              <item>
               <widget class="QStackedWidget" name="stackedWidget_content">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(254, 158, 49);</string>
+               </property>
                <property name="currentIndex">
                 <number>1</number>
                </property>
