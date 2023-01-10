@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1074</width>
-    <height>762</height>
+    <width>1156</width>
+    <height>864</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -551,7 +551,7 @@ QWidget{
 </string>
                </property>
                <property name="currentIndex">
-                <number>3</number>
+                <number>1</number>
                </property>
                <property name="elideMode">
                 <enum>Qt::ElideRight</enum>
@@ -766,7 +766,7 @@ QWidget{
                           </property>
                           <layout class="QGridLayout" name="gridLayout">
                            <item row="0" column="0">
-                            <widget class="QLineEdit" name="lineEdit">
+                            <widget class="QLineEdit" name="lineEdit_cnpj">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -796,7 +796,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="0" column="1" colspan="2">
-                            <widget class="QLineEdit" name="lineEdit_2">
+                            <widget class="QLineEdit" name="lineEdit_razao_social">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -820,7 +820,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="1" column="0" colspan="3">
-                            <widget class="QLineEdit" name="lineEdit_3">
+                            <widget class="QLineEdit" name="lineEdit_logradouro">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                                <horstretch>0</horstretch>
@@ -850,7 +850,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="2" column="0">
-                            <widget class="QLineEdit" name="lineEdit_4">
+                            <widget class="QLineEdit" name="lineEdit_numero">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -874,7 +874,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="2" column="1">
-                            <widget class="QLineEdit" name="lineEdit_5">
+                            <widget class="QLineEdit" name="lineEdit_complemento">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -898,7 +898,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="2" column="2">
-                            <widget class="QLineEdit" name="lineEdit_6">
+                            <widget class="QLineEdit" name="lineEdit_bairro">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -922,7 +922,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="3" column="0">
-                            <widget class="QLineEdit" name="lineEdit_7">
+                            <widget class="QLineEdit" name="lineEdit_municipio">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -946,7 +946,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="3" column="1">
-                            <widget class="QLineEdit" name="lineEdit_8">
+                            <widget class="QLineEdit" name="lineEdit_uf">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -970,7 +970,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="3" column="2">
-                            <widget class="QLineEdit" name="lineEdit_9">
+                            <widget class="QLineEdit" name="lineEdit_cep">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -994,7 +994,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="4" column="0">
-                            <widget class="QLineEdit" name="lineEdit_10">
+                            <widget class="QLineEdit" name="lineEdit_telefone">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -1021,7 +1021,7 @@ QWidget{
                             </widget>
                            </item>
                            <item row="4" column="1" colspan="2">
-                            <widget class="QLineEdit" name="lineEdit_11">
+                            <widget class="QLineEdit" name="lineEdit_email">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -1045,6 +1045,55 @@ QWidget{
                             </widget>
                            </item>
                           </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_4">
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+	background-color: rgb(242, 98, 15);
+	border-radius: 10px;
+}
+
+QPushButton:hover{
+	background-color: rgb(242, 84, 27);
+	border-radius: 10px;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_5">
+                        <item>
+                         <widget class="QPushButton" name="pushButton_cadastrar">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Cadastrar</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_limpar">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Limpar</string>
+                          </property>
                          </widget>
                         </item>
                        </layout>
