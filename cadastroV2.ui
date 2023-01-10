@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1074</width>
-    <height>674</height>
+    <height>762</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -40,6 +40,21 @@ border-radius: 15px;</string>
        <enum>QFrame::Raised</enum>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>12</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QFrame" name="frame_main_menu">
          <property name="minimumSize">
@@ -50,7 +65,7 @@ border-radius: 15px;</string>
          </property>
          <property name="maximumSize">
           <size>
-           <width>200</width>
+           <width>0</width>
            <height>600</height>
           </size>
          </property>
@@ -133,8 +148,8 @@ QToolBox::tab:hover{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>176</width>
-               <height>508</height>
+               <width>84</width>
+               <height>493</height>
               </rect>
              </property>
              <property name="cursor">
@@ -145,7 +160,7 @@ QToolBox::tab:hover{
              </attribute>
              <layout class="QVBoxLayout" name="verticalLayout_5">
               <item>
-               <widget class="QPushButton" name="pushButton_boxPage1">
+               <widget class="QPushButton" name="btn_home">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -196,7 +211,7 @@ QPushButton:hover{
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_boxPage2">
+               <widget class="QPushButton" name="btn_cadastrar">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -235,7 +250,7 @@ QPushButton:hover{
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_boxPage3">
+               <widget class="QPushButton" name="btn_contatos">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -274,7 +289,7 @@ QPushButton:hover{
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton_boxPage4">
+               <widget class="QPushButton" name="btn_sobre">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>0</horstretch>
@@ -332,8 +347,8 @@ QPushButton:hover{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>176</width>
-               <height>508</height>
+               <width>92</width>
+               <height>493</height>
               </rect>
              </property>
              <property name="cursor">
@@ -385,7 +400,7 @@ QPushButton:hover{
          </property>
          <property name="maximumSize">
           <size>
-           <width>800</width>
+           <width>1050</width>
            <height>600</height>
           </size>
          </property>
@@ -424,7 +439,7 @@ border-radius: 10px;</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_4">
              <item>
-              <widget class="QPushButton" name="pushButton_5">
+              <widget class="QPushButton" name="btn_toggle">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -436,6 +451,12 @@ border-radius: 10px;</string>
                  <width>50</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton:pressed{
+	background-color: rgb(254, 158,49);
+	border-radius: 0px;
+}</string>
                </property>
                <property name="text">
                 <string/>
@@ -455,7 +476,7 @@ border-radius: 10px;</string>
              <item>
               <widget class="QLabel" name="label_header_title">
                <property name="text">
-                <string>ImovCad - Cadastro de imóveis</string>
+                <string>ImovPy - Cadastro de imóveis</string>
                </property>
               </widget>
              </item>
@@ -530,7 +551,7 @@ QWidget{
 </string>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>3</number>
                </property>
                <property name="elideMode">
                 <enum>Qt::ElideRight</enum>
@@ -538,7 +559,7 @@ QWidget{
                <property name="documentMode">
                 <bool>false</bool>
                </property>
-               <widget class="QWidget" name="tabWidget_contentPage1">
+               <widget class="QWidget" name="page_home">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                   <horstretch>100</horstretch>
@@ -583,7 +604,7 @@ border-radius: 10px;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tabWidget_contentPage2">
+               <widget class="QWidget" name="page_cadastrar">
                 <property name="styleSheet">
                  <string notr="true">QWidget::tab{
 	background-color: rgb(254, 158, 49);
@@ -1277,7 +1298,7 @@ QPushButton:hover{
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tabWidget_contentPage3">
+               <widget class="QWidget" name="page_contatos">
                 <attribute name="title">
                  <string>Contatos</string>
                 </attribute>
@@ -1325,7 +1346,7 @@ border-radius: 10px;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tabWidget_contentPage4">
+               <widget class="QWidget" name="page_sobre">
                 <attribute name="title">
                  <string>Sobre</string>
                 </attribute>
@@ -1405,10 +1426,10 @@ border-radius: 10px;</string>
   </widget>
  </widget>
  <tabstops>
-  <tabstop>pushButton_boxPage1</tabstop>
-  <tabstop>pushButton_boxPage2</tabstop>
-  <tabstop>pushButton_boxPage3</tabstop>
-  <tabstop>pushButton_boxPage4</tabstop>
+  <tabstop>btn_home</tabstop>
+  <tabstop>btn_cadastrar</tabstop>
+  <tabstop>btn_contatos</tabstop>
+  <tabstop>btn_sobre</tabstop>
  </tabstops>
  <resources>
   <include location="icons.qrc"/>

@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1074, 674)
+        MainWindow.resize(1074, 762)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.horizontalLayout = QHBoxLayout(self.centralwidget)
@@ -40,11 +40,15 @@ class Ui_MainWindow(object):
         self.frame_main.setFrameShape(QFrame.StyledPanel)
         self.frame_main.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_main)
+#ifndef Q_OS_MAC
+        self.horizontalLayout_2.setSpacing(-1)
+#endif
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
+        self.horizontalLayout_2.setContentsMargins(0, 0, 12, 0)
         self.frame_main_menu = QFrame(self.frame_main)
         self.frame_main_menu.setObjectName(u"frame_main_menu")
         self.frame_main_menu.setMinimumSize(QSize(0, 0))
-        self.frame_main_menu.setMaximumSize(QSize(200, 600))
+        self.frame_main_menu.setMaximumSize(QSize(0, 600))
         self.frame_main_menu.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
         self.frame_main_menu.setFrameShape(QFrame.StyledPanel)
@@ -84,23 +88,23 @@ class Ui_MainWindow(object):
         self.toolBox.setInputMethodHints(Qt.ImhNone)
         self.toolBoxPage1 = QWidget()
         self.toolBoxPage1.setObjectName(u"toolBoxPage1")
-        self.toolBoxPage1.setGeometry(QRect(0, 0, 176, 508))
+        self.toolBoxPage1.setGeometry(QRect(0, 0, 84, 493))
         self.toolBoxPage1.setCursor(QCursor(Qt.PointingHandCursor))
         self.verticalLayout_5 = QVBoxLayout(self.toolBoxPage1)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
-        self.pushButton_boxPage1 = QPushButton(self.toolBoxPage1)
-        self.pushButton_boxPage1.setObjectName(u"pushButton_boxPage1")
+        self.btn_home = QPushButton(self.toolBoxPage1)
+        self.btn_home.setObjectName(u"btn_home")
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.pushButton_boxPage1.sizePolicy().hasHeightForWidth())
-        self.pushButton_boxPage1.setSizePolicy(sizePolicy)
-        self.pushButton_boxPage1.setMinimumSize(QSize(0, 30))
-        self.pushButton_boxPage1.setMaximumSize(QSize(16777215, 30))
-        self.pushButton_boxPage1.setSizeIncrement(QSize(0, 0))
-        self.pushButton_boxPage1.setBaseSize(QSize(0, 0))
-        self.pushButton_boxPage1.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_boxPage1.setStyleSheet(u"QPushButton{\n"
+        sizePolicy.setHeightForWidth(self.btn_home.sizePolicy().hasHeightForWidth())
+        self.btn_home.setSizePolicy(sizePolicy)
+        self.btn_home.setMinimumSize(QSize(0, 30))
+        self.btn_home.setMaximumSize(QSize(16777215, 30))
+        self.btn_home.setSizeIncrement(QSize(0, 0))
+        self.btn_home.setBaseSize(QSize(0, 0))
+        self.btn_home.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_home.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -110,16 +114,16 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_5.addWidget(self.pushButton_boxPage1)
+        self.verticalLayout_5.addWidget(self.btn_home)
 
-        self.pushButton_boxPage2 = QPushButton(self.toolBoxPage1)
-        self.pushButton_boxPage2.setObjectName(u"pushButton_boxPage2")
-        sizePolicy.setHeightForWidth(self.pushButton_boxPage2.sizePolicy().hasHeightForWidth())
-        self.pushButton_boxPage2.setSizePolicy(sizePolicy)
-        self.pushButton_boxPage2.setMinimumSize(QSize(0, 30))
-        self.pushButton_boxPage2.setMaximumSize(QSize(16777215, 30))
-        self.pushButton_boxPage2.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_boxPage2.setStyleSheet(u"QPushButton{\n"
+        self.btn_cadastrar = QPushButton(self.toolBoxPage1)
+        self.btn_cadastrar.setObjectName(u"btn_cadastrar")
+        sizePolicy.setHeightForWidth(self.btn_cadastrar.sizePolicy().hasHeightForWidth())
+        self.btn_cadastrar.setSizePolicy(sizePolicy)
+        self.btn_cadastrar.setMinimumSize(QSize(0, 30))
+        self.btn_cadastrar.setMaximumSize(QSize(16777215, 30))
+        self.btn_cadastrar.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_cadastrar.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -129,16 +133,16 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_5.addWidget(self.pushButton_boxPage2)
+        self.verticalLayout_5.addWidget(self.btn_cadastrar)
 
-        self.pushButton_boxPage3 = QPushButton(self.toolBoxPage1)
-        self.pushButton_boxPage3.setObjectName(u"pushButton_boxPage3")
-        sizePolicy.setHeightForWidth(self.pushButton_boxPage3.sizePolicy().hasHeightForWidth())
-        self.pushButton_boxPage3.setSizePolicy(sizePolicy)
-        self.pushButton_boxPage3.setMinimumSize(QSize(0, 30))
-        self.pushButton_boxPage3.setMaximumSize(QSize(16777215, 30))
-        self.pushButton_boxPage3.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_boxPage3.setStyleSheet(u"QPushButton{\n"
+        self.btn_contatos = QPushButton(self.toolBoxPage1)
+        self.btn_contatos.setObjectName(u"btn_contatos")
+        sizePolicy.setHeightForWidth(self.btn_contatos.sizePolicy().hasHeightForWidth())
+        self.btn_contatos.setSizePolicy(sizePolicy)
+        self.btn_contatos.setMinimumSize(QSize(0, 30))
+        self.btn_contatos.setMaximumSize(QSize(16777215, 30))
+        self.btn_contatos.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_contatos.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -148,16 +152,16 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_5.addWidget(self.pushButton_boxPage3)
+        self.verticalLayout_5.addWidget(self.btn_contatos)
 
-        self.pushButton_boxPage4 = QPushButton(self.toolBoxPage1)
-        self.pushButton_boxPage4.setObjectName(u"pushButton_boxPage4")
-        sizePolicy.setHeightForWidth(self.pushButton_boxPage4.sizePolicy().hasHeightForWidth())
-        self.pushButton_boxPage4.setSizePolicy(sizePolicy)
-        self.pushButton_boxPage4.setMinimumSize(QSize(0, 30))
-        self.pushButton_boxPage4.setMaximumSize(QSize(16777215, 30))
-        self.pushButton_boxPage4.setCursor(QCursor(Qt.PointingHandCursor))
-        self.pushButton_boxPage4.setStyleSheet(u"QPushButton{\n"
+        self.btn_sobre = QPushButton(self.toolBoxPage1)
+        self.btn_sobre.setObjectName(u"btn_sobre")
+        sizePolicy.setHeightForWidth(self.btn_sobre.sizePolicy().hasHeightForWidth())
+        self.btn_sobre.setSizePolicy(sizePolicy)
+        self.btn_sobre.setMinimumSize(QSize(0, 30))
+        self.btn_sobre.setMaximumSize(QSize(16777215, 30))
+        self.btn_sobre.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_sobre.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -167,7 +171,7 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_5.addWidget(self.pushButton_boxPage4)
+        self.verticalLayout_5.addWidget(self.btn_sobre)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -176,7 +180,7 @@ class Ui_MainWindow(object):
         self.toolBox.addItem(self.toolBoxPage1, u"Menu")
         self.toolBoxPage2 = QWidget()
         self.toolBoxPage2.setObjectName(u"toolBoxPage2")
-        self.toolBoxPage2.setGeometry(QRect(0, 0, 176, 508))
+        self.toolBoxPage2.setGeometry(QRect(0, 0, 92, 493))
         self.toolBoxPage2.setCursor(QCursor(Qt.PointingHandCursor))
         self.horizontalLayout_3 = QHBoxLayout(self.toolBoxPage2)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
@@ -201,7 +205,7 @@ class Ui_MainWindow(object):
         self.frame_main_content = QFrame(self.frame_main)
         self.frame_main_content.setObjectName(u"frame_main_content")
         self.frame_main_content.setMinimumSize(QSize(0, 0))
-        self.frame_main_content.setMaximumSize(QSize(800, 600))
+        self.frame_main_content.setMaximumSize(QSize(1050, 600))
         self.frame_main_content.setStyleSheet(u"QFrame{\n"
 "	background-color: rgb(32,89,79);\n"
 "	border-radius: 10px;\n"
@@ -221,17 +225,21 @@ class Ui_MainWindow(object):
         self.frame_header.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_header)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.pushButton_5 = QPushButton(self.frame_header)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        sizePolicy.setHeightForWidth(self.pushButton_5.sizePolicy().hasHeightForWidth())
-        self.pushButton_5.setSizePolicy(sizePolicy)
-        self.pushButton_5.setMaximumSize(QSize(50, 16777215))
+        self.btn_toggle = QPushButton(self.frame_header)
+        self.btn_toggle.setObjectName(u"btn_toggle")
+        sizePolicy.setHeightForWidth(self.btn_toggle.sizePolicy().hasHeightForWidth())
+        self.btn_toggle.setSizePolicy(sizePolicy)
+        self.btn_toggle.setMaximumSize(QSize(50, 16777215))
+        self.btn_toggle.setStyleSheet(u"QPushButton:pressed{\n"
+"	background-color: rgb(254, 158,49);\n"
+"	border-radius: 0px;\n"
+"}")
         icon = QIcon()
         icon.addFile(u":/icons/icons/menu2.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_5.setIcon(icon)
-        self.pushButton_5.setIconSize(QSize(30, 30))
+        self.btn_toggle.setIcon(icon)
+        self.btn_toggle.setIconSize(QSize(30, 30))
 
-        self.horizontalLayout_4.addWidget(self.pushButton_5)
+        self.horizontalLayout_4.addWidget(self.btn_toggle)
 
         self.label_header_title = QLabel(self.frame_header)
         self.label_header_title.setObjectName(u"label_header_title")
@@ -277,18 +285,18 @@ class Ui_MainWindow(object):
 "")
         self.tabWidget_content.setElideMode(Qt.ElideRight)
         self.tabWidget_content.setDocumentMode(False)
-        self.tabWidget_contentPage1 = QWidget()
-        self.tabWidget_contentPage1.setObjectName(u"tabWidget_contentPage1")
+        self.page_home = QWidget()
+        self.page_home.setObjectName(u"page_home")
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(100)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.tabWidget_contentPage1.sizePolicy().hasHeightForWidth())
-        self.tabWidget_contentPage1.setSizePolicy(sizePolicy1)
-        self.tabWidget_contentPage1.setMinimumSize(QSize(0, 0))
-        self.tabWidget_contentPage1.setStyleSheet(u"")
-        self.horizontalLayout_9 = QHBoxLayout(self.tabWidget_contentPage1)
+        sizePolicy1.setHeightForWidth(self.page_home.sizePolicy().hasHeightForWidth())
+        self.page_home.setSizePolicy(sizePolicy1)
+        self.page_home.setMinimumSize(QSize(0, 0))
+        self.page_home.setStyleSheet(u"")
+        self.horizontalLayout_9 = QHBoxLayout(self.page_home)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.frame_1_content = QFrame(self.tabWidget_contentPage1)
+        self.frame_1_content = QFrame(self.page_home)
         self.frame_1_content.setObjectName(u"frame_1_content")
         self.frame_1_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
@@ -304,10 +312,10 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_9.addWidget(self.frame_1_content)
 
-        self.tabWidget_content.addTab(self.tabWidget_contentPage1, "")
-        self.tabWidget_contentPage2 = QWidget()
-        self.tabWidget_contentPage2.setObjectName(u"tabWidget_contentPage2")
-        self.tabWidget_contentPage2.setStyleSheet(u"QWidget::tab{\n"
+        self.tabWidget_content.addTab(self.page_home, "")
+        self.page_cadastrar = QWidget()
+        self.page_cadastrar.setObjectName(u"page_cadastrar")
+        self.page_cadastrar.setStyleSheet(u"QWidget::tab{\n"
 "	background-color: rgb(254, 158, 49);\n"
 "	color: rgb(0,0,0,);\n"
 "}\n"
@@ -316,9 +324,9 @@ class Ui_MainWindow(object):
 "	background-color: rgb(254, 158, 49);\n"
 "	color: rgb(0,0,0,);\n"
 "}")
-        self.horizontalLayout_16 = QHBoxLayout(self.tabWidget_contentPage2)
+        self.horizontalLayout_16 = QHBoxLayout(self.page_cadastrar)
         self.horizontalLayout_16.setObjectName(u"horizontalLayout_16")
-        self.tabWidget = QTabWidget(self.tabWidget_contentPage2)
+        self.tabWidget = QTabWidget(self.page_cadastrar)
         self.tabWidget.setObjectName(u"tabWidget")
         sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
         self.tabWidget.setSizePolicy(sizePolicy)
@@ -621,12 +629,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_16.addWidget(self.tabWidget)
 
-        self.tabWidget_content.addTab(self.tabWidget_contentPage2, "")
-        self.tabWidget_contentPage3 = QWidget()
-        self.tabWidget_contentPage3.setObjectName(u"tabWidget_contentPage3")
-        self.horizontalLayout_14 = QHBoxLayout(self.tabWidget_contentPage3)
+        self.tabWidget_content.addTab(self.page_cadastrar, "")
+        self.page_contatos = QWidget()
+        self.page_contatos.setObjectName(u"page_contatos")
+        self.horizontalLayout_14 = QHBoxLayout(self.page_contatos)
         self.horizontalLayout_14.setObjectName(u"horizontalLayout_14")
-        self.frame_3_content = QFrame(self.tabWidget_contentPage3)
+        self.frame_3_content = QFrame(self.page_contatos)
         self.frame_3_content.setObjectName(u"frame_3_content")
         self.frame_3_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
@@ -651,12 +659,12 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_14.addWidget(self.frame_3_content)
 
-        self.tabWidget_content.addTab(self.tabWidget_contentPage3, "")
-        self.tabWidget_contentPage4 = QWidget()
-        self.tabWidget_contentPage4.setObjectName(u"tabWidget_contentPage4")
-        self.horizontalLayout_12 = QHBoxLayout(self.tabWidget_contentPage4)
+        self.tabWidget_content.addTab(self.page_contatos, "")
+        self.page_sobre = QWidget()
+        self.page_sobre.setObjectName(u"page_sobre")
+        self.horizontalLayout_12 = QHBoxLayout(self.page_sobre)
         self.horizontalLayout_12.setObjectName(u"horizontalLayout_12")
-        self.frame_4_content = QFrame(self.tabWidget_contentPage4)
+        self.frame_4_content = QFrame(self.page_sobre)
         self.frame_4_content.setObjectName(u"frame_4_content")
         self.frame_4_content.setStyleSheet(u"background-color: rgb(32,89,79);\n"
 "border-radius: 10px;")
@@ -673,7 +681,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_12.addWidget(self.frame_4_content)
 
-        self.tabWidget_content.addTab(self.tabWidget_contentPage4, "")
+        self.tabWidget_content.addTab(self.page_sobre, "")
 
         self.horizontalLayout_8.addWidget(self.tabWidget_content)
 
@@ -705,14 +713,14 @@ class Ui_MainWindow(object):
         self.horizontalLayout.addWidget(self.frame_main)
 
         MainWindow.setCentralWidget(self.centralwidget)
-        QWidget.setTabOrder(self.pushButton_boxPage1, self.pushButton_boxPage2)
-        QWidget.setTabOrder(self.pushButton_boxPage2, self.pushButton_boxPage3)
-        QWidget.setTabOrder(self.pushButton_boxPage3, self.pushButton_boxPage4)
+        QWidget.setTabOrder(self.btn_home, self.btn_cadastrar)
+        QWidget.setTabOrder(self.btn_cadastrar, self.btn_contatos)
+        QWidget.setTabOrder(self.btn_contatos, self.btn_sobre)
 
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.tabWidget_content.setCurrentIndex(1)
+        self.tabWidget_content.setCurrentIndex(3)
         self.tabWidget.setCurrentIndex(0)
 
 
@@ -721,17 +729,17 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.pushButton_boxPage1.setText(QCoreApplication.translate("MainWindow", u"Home", None))
-        self.pushButton_boxPage2.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
-        self.pushButton_boxPage3.setText(QCoreApplication.translate("MainWindow", u"Contatos", None))
-        self.pushButton_boxPage4.setText(QCoreApplication.translate("MainWindow", u"Sobre", None))
+        self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Home", None))
+        self.btn_cadastrar.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
+        self.btn_contatos.setText(QCoreApplication.translate("MainWindow", u"Contatos", None))
+        self.btn_sobre.setText(QCoreApplication.translate("MainWindow", u"Sobre", None))
         self.toolBox.setItemText(self.toolBox.indexOf(self.toolBoxPage1), QCoreApplication.translate("MainWindow", u"Menu", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Created 01/01/2023", None))
         self.toolBox.setItemText(self.toolBox.indexOf(self.toolBoxPage2), QCoreApplication.translate("MainWindow", u"Info", None))
-        self.pushButton_5.setText("")
-        self.label_header_title.setText(QCoreApplication.translate("MainWindow", u"ImovCad - Cadastro de im\u00f3veis", None))
+        self.btn_toggle.setText("")
+        self.label_header_title.setText(QCoreApplication.translate("MainWindow", u"ImovPy - Cadastro de im\u00f3veis", None))
         self.label_1_content.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/icons/logo4.png\"/></p></body></html>", None))
-        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage1), QCoreApplication.translate("MainWindow", u"Home", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.page_home), QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">CADASTRO</span></p></body></html>", None))
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CNPJ", None))
         self.lineEdit_2.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Raz\u00e3o Social", None))
@@ -773,11 +781,11 @@ class Ui_MainWindow(object):
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Lista", None))
-        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage2), QCoreApplication.translate("MainWindow", u"Cadastrar", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.page_cadastrar), QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/icons/whatsApp.png\"/><span style=\" font-size:24pt; vertical-align:super;\">(44)99999-9999</span></p><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/icons/icons/Youtube.png\"/><span style=\" font-size:18pt;\"/><span style=\" font-size:24pt; vertical-align:super;\">/marcelogalli</span></p><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/icons/icons/email.png\"/><span style=\" font-size:24pt; vertical-align:super;\">marcelolemesgalli@hotmail.com</span></p></body></html>", None))
-        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage3), QCoreApplication.translate("MainWindow", u"Contatos", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.page_contatos), QCoreApplication.translate("MainWindow", u"Contatos", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Empresa criada para solu\u00e7\u00e3o de agilidade em processos de uma empresa!</span></p></body></html>", None))
-        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.tabWidget_contentPage4), QCoreApplication.translate("MainWindow", u"Sobre", None))
+        self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.page_sobre), QCoreApplication.translate("MainWindow", u"Sobre", None))
         self.label_footer.setText(QCoreApplication.translate("MainWindow", u"Created by Galli, Marcelo L. \u24c7", None))
     # retranslateUi
 
