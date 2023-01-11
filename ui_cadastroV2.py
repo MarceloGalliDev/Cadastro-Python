@@ -588,6 +588,7 @@ class Ui_MainWindow(object):
         self.tb_company.setObjectName(u"tb_company")
         self.tb_company.setStyleSheet(u"QTableView {\n"
 "	background-color: rgb(255,255,255);\n"
+"	color: rgb(0,0,0,);\n"
 "}\n"
 "\n"
 "")
@@ -753,8 +754,8 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.tabWidget_content.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget_content.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

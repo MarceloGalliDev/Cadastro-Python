@@ -35,7 +35,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         ###############  
 
         ### FUNCTIONS SEARCH ###
-        #self.buscar_empresas()
+        self.buscar_empresas()
         ########################
     
     ### MENU ANIMATION ###    
@@ -114,6 +114,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         db = Data_base()
         db.connect()
         result = db.select_all_companies()
+        
+        print(result)
         
         self.tb_company.clearContents()
         self.tb_company.setRowCount(len(result))

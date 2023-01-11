@@ -49,7 +49,7 @@ class Data_base:
     def select_all_companies(self):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("SELECT * FROM Empresas ORDER BY NOME")
+            cursor.execute("SELECT * FROM EMPRESAS ORDER BY RAZAO_SOCIAL")
             empresas = cursor.fetchall()
             return empresas
         except:

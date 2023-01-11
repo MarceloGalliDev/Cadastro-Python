@@ -551,7 +551,7 @@ QWidget{
 </string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <property name="elideMode">
                 <enum>Qt::ElideRight</enum>
@@ -657,7 +657,7 @@ QWidget{
                     <enum>QTabWidget::Rounded</enum>
                    </property>
                    <property name="currentIndex">
-                    <number>0</number>
+                    <number>1</number>
                    </property>
                    <property name="elideMode">
                     <enum>Qt::ElideLeft</enum>
@@ -1182,6 +1182,7 @@ QPushButton:hover{
                           <property name="styleSheet">
                            <string notr="true">QTableView {
 	background-color: rgb(255,255,255);
+	color: rgb(0,0,0,);
 }
 
 </string>
