@@ -28,7 +28,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         ### AUTO COMPLETE ###
         self.lineEdit_cnpj.editingFinished.connect(self.consult_api)
-        #####################  
+        #####################
+        
+        ### BUTTONS ###
+        self.pushButton_cadastrar.clicked.connect(self.cadastrar_empresas)
+        ###############  
     
     ### MENU ANIMATION ###    
     def leftMenu(self):

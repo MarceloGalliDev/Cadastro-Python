@@ -17,7 +17,6 @@ class Data_base:
         cursor = self.connection.cursor()
         cursor.execute("""
             CREATE TABLE IF NOT EXISTS Empresas(
-                PRIMARY KEY (CNPJ)
                 CNPJ TEXT,
                 RAZAO_SOCIAL TEXT,
                 LOGRADOURO TEXT,
@@ -29,6 +28,8 @@ class Data_base:
                 CEP TEXT,
                 TELEFONE TEXT,
                 EMAIL TEXT,
+                
+                PRIMARY KEY (CNPJ)
             );
         """)
     
