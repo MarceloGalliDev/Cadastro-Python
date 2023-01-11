@@ -1,5 +1,5 @@
-from PySide6.QtCore import Qt, QCoreApplication, QPropertyAnimation, QEasingCurve
-from PySide6.QtWidgets import (QApplication, QMainWindow, QMessageBox)
+from PySide6.QtCore import QPropertyAnimation, QEasingCurve
+from PySide6.QtWidgets import (QApplication, QMainWindow, QMessageBox, QTableWidgetItem)
 from PySide6.QtGui import QIcon
 from ui_cadastroV2 import Ui_MainWindow
 import sys
@@ -31,8 +31,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         #####################
         
         ### BUTTONS ###
-        self.pushButton_cadastrar.clicked.connect(self.cadastrar_empresas)
+        self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
         ###############  
+
+        ### FUNCTIONS SEARCH ###
+        #self.buscar_empresas()
+        ########################
     
     ### MENU ANIMATION ###    
     def leftMenu(self):
@@ -63,7 +67,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lineEdit_municipio.setText(campos[5])
         self.lineEdit_uf.setText(campos[6])
         self.lineEdit_cep.setText(campos[7].replace('.', '').replace('-', ''))
-        self.lineEdit_telefone.setText(campos[8]).replace('(', '').replace('-', '').replace(')','')
+        self.lineEdit_telefone.setText(campos[8].replace('(', '').replace('-', '').replace(')',''))
         self.lineEdit_email.setText(campos[9])    
     ####################
          
@@ -83,7 +87,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.lineEdit_uf.text(),
             self.lineEdit_cep.text(),
             self.lineEdit_telefone.text().strip(),
-            self.lineEdit_email.text(),
+            self.lineEdit_email.text()
         )
 
         resp = db.register_company(fullDataSet)
@@ -104,6 +108,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             db.close_connection()
             return
     #################
+    
+    ### BUSCAR ###
+    def buscar_empresas(self):
+        db = Data_base()
+        db.connect()
+        result = db.select_all_companies()
+        
+        self.tb_company.clearContents()
+        self.tb_company.setRowCount(len(result))
+        
+        for row, text in enumerate(result):
+            for column, data, in enumerate(text):
+                self.tb_company.setItem(row, column, QTableWidgetItem(str(data)))
+        
+        db.close_connection()
+        
+    ##############    
+        
 if __name__ == "__main__":
     
     db = Data_base()

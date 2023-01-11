@@ -551,7 +551,7 @@ QWidget{
 </string>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <property name="elideMode">
                 <enum>Qt::ElideRight</enum>
@@ -728,23 +728,20 @@ QWidget{
                        <property name="frameShadow">
                         <enum>QFrame::Raised</enum>
                        </property>
-                       <layout class="QVBoxLayout" name="verticalLayout_2">
-                        <property name="spacing">
+                       <layout class="QGridLayout" name="gridLayout_2">
+                        <property name="leftMargin">
                          <number>5</number>
                         </property>
-                        <property name="leftMargin">
-                         <number>0</number>
-                        </property>
                         <property name="topMargin">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <property name="rightMargin">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <property name="bottomMargin">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
-                        <item>
+                        <item row="0" column="0">
                          <widget class="QFrame" name="frame">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -780,6 +777,30 @@ QWidget{
                            <property name="spacing">
                             <number>5</number>
                            </property>
+                           <item row="3" column="2">
+                            <widget class="QLineEdit" name="lineEdit_cep">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>18</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(136,191,181);</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                             <property name="placeholderText">
+                              <string>CEP</string>
+                             </property>
+                            </widget>
+                           </item>
                            <item row="0" column="0">
                             <widget class="QLineEdit" name="lineEdit_cnpj">
                              <property name="sizePolicy">
@@ -834,132 +855,6 @@ QWidget{
                              </property>
                             </widget>
                            </item>
-                           <item row="1" column="0" colspan="3">
-                            <widget class="QLineEdit" name="lineEdit_logradouro">
-                             <property name="sizePolicy">
-                              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                              </sizepolicy>
-                             </property>
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>40</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>18</pointsize>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">background-color: rgb(136,191,181);</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Logradouro</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item row="2" column="0">
-                            <widget class="QLineEdit" name="lineEdit_numero">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>40</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>18</pointsize>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">background-color: rgb(136,191,181);</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Número</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item row="2" column="1">
-                            <widget class="QLineEdit" name="lineEdit_complemento">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>40</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>18</pointsize>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">background-color: rgb(136,191,181);</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Complemento</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item row="2" column="2">
-                            <widget class="QLineEdit" name="lineEdit_bairro">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>40</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>18</pointsize>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">background-color: rgb(136,191,181);</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Bairro</string>
-                             </property>
-                            </widget>
-                           </item>
-                           <item row="3" column="0">
-                            <widget class="QLineEdit" name="lineEdit_municipio">
-                             <property name="minimumSize">
-                              <size>
-                               <width>0</width>
-                               <height>40</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <pointsize>18</pointsize>
-                              </font>
-                             </property>
-                             <property name="styleSheet">
-                              <string notr="true">background-color: rgb(136,191,181);</string>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                             <property name="placeholderText">
-                              <string>Município</string>
-                             </property>
-                            </widget>
-                           </item>
                            <item row="3" column="1">
                             <widget class="QLineEdit" name="lineEdit_uf">
                              <property name="minimumSize">
@@ -984,8 +879,8 @@ QWidget{
                              </property>
                             </widget>
                            </item>
-                           <item row="3" column="2">
-                            <widget class="QLineEdit" name="lineEdit_cep">
+                           <item row="4" column="1" colspan="2">
+                            <widget class="QLineEdit" name="lineEdit_email">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -1004,7 +899,7 @@ QWidget{
                               <set>Qt::AlignCenter</set>
                              </property>
                              <property name="placeholderText">
-                              <string>CEP</string>
+                              <string>E-Mail</string>
                              </property>
                             </widget>
                            </item>
@@ -1035,8 +930,8 @@ QWidget{
                              </property>
                             </widget>
                            </item>
-                           <item row="4" column="1" colspan="2">
-                            <widget class="QLineEdit" name="lineEdit_email">
+                           <item row="3" column="0">
+                            <widget class="QLineEdit" name="lineEdit_municipio">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -1055,7 +950,109 @@ QWidget{
                               <set>Qt::AlignCenter</set>
                              </property>
                              <property name="placeholderText">
-                              <string>E-Mail</string>
+                              <string>Município</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="0" colspan="2">
+                            <widget class="QLineEdit" name="lineEdit_logradouro">
+                             <property name="sizePolicy">
+                              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                              </sizepolicy>
+                             </property>
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>18</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(136,191,181);</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Logradouro</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="2">
+                            <widget class="QLineEdit" name="lineEdit_numero">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>18</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(136,191,181);</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Número</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="0">
+                            <widget class="QLineEdit" name="lineEdit_complemento">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>18</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(136,191,181);</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Complemento</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="1" colspan="2">
+                            <widget class="QLineEdit" name="lineEdit_bairro">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>40</height>
+                              </size>
+                             </property>
+                             <property name="font">
+                              <font>
+                               <pointsize>18</pointsize>
+                              </font>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">background-color: rgb(136,191,181);</string>
+                             </property>
+                             <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                             </property>
+                             <property name="placeholderText">
+                              <string>Bairro</string>
                              </property>
                             </widget>
                            </item>
@@ -1086,7 +1083,7 @@ QPushButton:hover{
                        </property>
                        <layout class="QHBoxLayout" name="horizontalLayout_5">
                         <item>
-                         <widget class="QPushButton" name="pushButton_cadastrar">
+                         <widget class="QPushButton" name="btn_cadastrar_2">
                           <property name="minimumSize">
                            <size>
                             <width>0</width>
@@ -1181,10 +1178,12 @@ QPushButton:hover{
                          <number>0</number>
                         </property>
                         <item>
-                         <widget class="QTableWidget" name="tableWidget">
+                         <widget class="QTableWidget" name="tb_company">
                           <property name="styleSheet">
-                           <string notr="true">color: rgb(0,0,0);
-background-color: rgb(255,255,255);
+                           <string notr="true">QTableView {
+	background-color: rgb(255,255,255);
+}
+
 </string>
                           </property>
                           <column>

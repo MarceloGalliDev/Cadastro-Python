@@ -376,10 +376,9 @@ class Ui_MainWindow(object):
         self.frame_2_content.setStyleSheet(u"background-color: rgb(32,89,79);")
         self.frame_2_content.setFrameShape(QFrame.StyledPanel)
         self.frame_2_content.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.frame_2_content)
-        self.verticalLayout_2.setSpacing(5)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.gridLayout_2 = QGridLayout(self.frame_2_content)
+        self.gridLayout_2.setObjectName(u"gridLayout_2")
+        self.gridLayout_2.setContentsMargins(5, 5, 5, 5)
         self.frame = QFrame(self.frame_2_content)
         self.frame.setObjectName(u"frame")
         sizePolicy.setHeightForWidth(self.frame.sizePolicy().hasHeightForWidth())
@@ -391,6 +390,17 @@ class Ui_MainWindow(object):
         self.gridLayout.setSpacing(5)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
+        self.lineEdit_cep = QLineEdit(self.frame)
+        self.lineEdit_cep.setObjectName(u"lineEdit_cep")
+        self.lineEdit_cep.setMinimumSize(QSize(0, 40))
+        font1 = QFont()
+        font1.setPointSize(18)
+        self.lineEdit_cep.setFont(font1)
+        self.lineEdit_cep.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_cep.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.lineEdit_cep, 3, 2, 1, 1)
+
         self.lineEdit_cnpj = QLineEdit(self.frame)
         self.lineEdit_cnpj.setObjectName(u"lineEdit_cnpj")
         sizePolicy2 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
@@ -399,8 +409,6 @@ class Ui_MainWindow(object):
         sizePolicy2.setHeightForWidth(self.lineEdit_cnpj.sizePolicy().hasHeightForWidth())
         self.lineEdit_cnpj.setSizePolicy(sizePolicy2)
         self.lineEdit_cnpj.setMinimumSize(QSize(0, 40))
-        font1 = QFont()
-        font1.setPointSize(18)
         self.lineEdit_cnpj.setFont(font1)
         self.lineEdit_cnpj.setStyleSheet(u"background-color: rgb(136,191,181);")
         self.lineEdit_cnpj.setAlignment(Qt.AlignCenter)
@@ -416,53 +424,6 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.lineEdit_razao_social, 0, 1, 1, 2)
 
-        self.lineEdit_logradouro = QLineEdit(self.frame)
-        self.lineEdit_logradouro.setObjectName(u"lineEdit_logradouro")
-        sizePolicy2.setHeightForWidth(self.lineEdit_logradouro.sizePolicy().hasHeightForWidth())
-        self.lineEdit_logradouro.setSizePolicy(sizePolicy2)
-        self.lineEdit_logradouro.setMinimumSize(QSize(0, 40))
-        self.lineEdit_logradouro.setFont(font1)
-        self.lineEdit_logradouro.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_logradouro.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_logradouro, 1, 0, 1, 3)
-
-        self.lineEdit_numero = QLineEdit(self.frame)
-        self.lineEdit_numero.setObjectName(u"lineEdit_numero")
-        self.lineEdit_numero.setMinimumSize(QSize(0, 40))
-        self.lineEdit_numero.setFont(font1)
-        self.lineEdit_numero.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_numero.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_numero, 2, 0, 1, 1)
-
-        self.lineEdit_complemento = QLineEdit(self.frame)
-        self.lineEdit_complemento.setObjectName(u"lineEdit_complemento")
-        self.lineEdit_complemento.setMinimumSize(QSize(0, 40))
-        self.lineEdit_complemento.setFont(font1)
-        self.lineEdit_complemento.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_complemento.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_complemento, 2, 1, 1, 1)
-
-        self.lineEdit_bairro = QLineEdit(self.frame)
-        self.lineEdit_bairro.setObjectName(u"lineEdit_bairro")
-        self.lineEdit_bairro.setMinimumSize(QSize(0, 40))
-        self.lineEdit_bairro.setFont(font1)
-        self.lineEdit_bairro.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_bairro.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_bairro, 2, 2, 1, 1)
-
-        self.lineEdit_municipio = QLineEdit(self.frame)
-        self.lineEdit_municipio.setObjectName(u"lineEdit_municipio")
-        self.lineEdit_municipio.setMinimumSize(QSize(0, 40))
-        self.lineEdit_municipio.setFont(font1)
-        self.lineEdit_municipio.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_municipio.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_municipio, 3, 0, 1, 1)
-
         self.lineEdit_uf = QLineEdit(self.frame)
         self.lineEdit_uf.setObjectName(u"lineEdit_uf")
         self.lineEdit_uf.setMinimumSize(QSize(0, 40))
@@ -471,24 +432,6 @@ class Ui_MainWindow(object):
         self.lineEdit_uf.setAlignment(Qt.AlignCenter)
 
         self.gridLayout.addWidget(self.lineEdit_uf, 3, 1, 1, 1)
-
-        self.lineEdit_cep = QLineEdit(self.frame)
-        self.lineEdit_cep.setObjectName(u"lineEdit_cep")
-        self.lineEdit_cep.setMinimumSize(QSize(0, 40))
-        self.lineEdit_cep.setFont(font1)
-        self.lineEdit_cep.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_cep.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_cep, 3, 2, 1, 1)
-
-        self.lineEdit_telefone = QLineEdit(self.frame)
-        self.lineEdit_telefone.setObjectName(u"lineEdit_telefone")
-        self.lineEdit_telefone.setMinimumSize(QSize(0, 40))
-        self.lineEdit_telefone.setFont(font1)
-        self.lineEdit_telefone.setStyleSheet(u"background-color: rgb(136,191,181);")
-        self.lineEdit_telefone.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout.addWidget(self.lineEdit_telefone, 4, 0, 1, 1)
 
         self.lineEdit_email = QLineEdit(self.frame)
         self.lineEdit_email.setObjectName(u"lineEdit_email")
@@ -499,8 +442,64 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addWidget(self.lineEdit_email, 4, 1, 1, 2)
 
+        self.lineEdit_telefone = QLineEdit(self.frame)
+        self.lineEdit_telefone.setObjectName(u"lineEdit_telefone")
+        self.lineEdit_telefone.setMinimumSize(QSize(0, 40))
+        self.lineEdit_telefone.setFont(font1)
+        self.lineEdit_telefone.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_telefone.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_2.addWidget(self.frame)
+        self.gridLayout.addWidget(self.lineEdit_telefone, 4, 0, 1, 1)
+
+        self.lineEdit_municipio = QLineEdit(self.frame)
+        self.lineEdit_municipio.setObjectName(u"lineEdit_municipio")
+        self.lineEdit_municipio.setMinimumSize(QSize(0, 40))
+        self.lineEdit_municipio.setFont(font1)
+        self.lineEdit_municipio.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_municipio.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.lineEdit_municipio, 3, 0, 1, 1)
+
+        self.lineEdit_logradouro = QLineEdit(self.frame)
+        self.lineEdit_logradouro.setObjectName(u"lineEdit_logradouro")
+        sizePolicy2.setHeightForWidth(self.lineEdit_logradouro.sizePolicy().hasHeightForWidth())
+        self.lineEdit_logradouro.setSizePolicy(sizePolicy2)
+        self.lineEdit_logradouro.setMinimumSize(QSize(0, 40))
+        self.lineEdit_logradouro.setFont(font1)
+        self.lineEdit_logradouro.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_logradouro.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.lineEdit_logradouro, 1, 0, 1, 2)
+
+        self.lineEdit_numero = QLineEdit(self.frame)
+        self.lineEdit_numero.setObjectName(u"lineEdit_numero")
+        self.lineEdit_numero.setMinimumSize(QSize(0, 40))
+        self.lineEdit_numero.setFont(font1)
+        self.lineEdit_numero.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_numero.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.lineEdit_numero, 1, 2, 1, 1)
+
+        self.lineEdit_complemento = QLineEdit(self.frame)
+        self.lineEdit_complemento.setObjectName(u"lineEdit_complemento")
+        self.lineEdit_complemento.setMinimumSize(QSize(0, 40))
+        self.lineEdit_complemento.setFont(font1)
+        self.lineEdit_complemento.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_complemento.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.lineEdit_complemento, 2, 0, 1, 1)
+
+        self.lineEdit_bairro = QLineEdit(self.frame)
+        self.lineEdit_bairro.setObjectName(u"lineEdit_bairro")
+        self.lineEdit_bairro.setMinimumSize(QSize(0, 40))
+        self.lineEdit_bairro.setFont(font1)
+        self.lineEdit_bairro.setStyleSheet(u"background-color: rgb(136,191,181);")
+        self.lineEdit_bairro.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.lineEdit_bairro, 2, 1, 1, 2)
+
+
+        self.gridLayout_2.addWidget(self.frame, 0, 0, 1, 1)
 
 
         self.verticalLayout_8.addWidget(self.frame_2_content)
@@ -520,11 +519,11 @@ class Ui_MainWindow(object):
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.frame_4)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.pushButton_cadastrar = QPushButton(self.frame_4)
-        self.pushButton_cadastrar.setObjectName(u"pushButton_cadastrar")
-        self.pushButton_cadastrar.setMinimumSize(QSize(0, 30))
+        self.btn_cadastrar_2 = QPushButton(self.frame_4)
+        self.btn_cadastrar_2.setObjectName(u"btn_cadastrar_2")
+        self.btn_cadastrar_2.setMinimumSize(QSize(0, 30))
 
-        self.horizontalLayout_5.addWidget(self.pushButton_cadastrar)
+        self.horizontalLayout_5.addWidget(self.btn_cadastrar_2)
 
         self.pushButton_limpar = QPushButton(self.frame_4)
         self.pushButton_limpar.setObjectName(u"pushButton_limpar")
@@ -561,37 +560,39 @@ class Ui_MainWindow(object):
         self.horizontalLayout_15.setSpacing(5)
         self.horizontalLayout_15.setObjectName(u"horizontalLayout_15")
         self.horizontalLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.tableWidget = QTableWidget(self.frame_2)
-        if (self.tableWidget.columnCount() < 11):
-            self.tableWidget.setColumnCount(11)
+        self.tb_company = QTableWidget(self.frame_2)
+        if (self.tb_company.columnCount() < 11):
+            self.tb_company.setColumnCount(11)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.tb_company.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.tb_company.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.tb_company.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.tb_company.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        self.tb_company.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        self.tb_company.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        self.tb_company.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        self.tb_company.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        self.tb_company.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(9, __qtablewidgetitem9)
+        self.tb_company.setHorizontalHeaderItem(9, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(10, __qtablewidgetitem10)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setStyleSheet(u"color: rgb(0,0,0);\n"
-"background-color: rgb(255,255,255);\n"
+        self.tb_company.setHorizontalHeaderItem(10, __qtablewidgetitem10)
+        self.tb_company.setObjectName(u"tb_company")
+        self.tb_company.setStyleSheet(u"QTableView {\n"
+"	background-color: rgb(255,255,255);\n"
+"}\n"
+"\n"
 "")
 
-        self.horizontalLayout_15.addWidget(self.tableWidget)
+        self.horizontalLayout_15.addWidget(self.tb_company)
 
         self.frame_3 = QFrame(self.frame_2)
         self.frame_3.setObjectName(u"frame_3")
@@ -752,7 +753,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.tabWidget_content.setCurrentIndex(1)
+        self.tabWidget_content.setCurrentIndex(0)
         self.tabWidget.setCurrentIndex(0)
 
 
@@ -773,43 +774,43 @@ class Ui_MainWindow(object):
         self.label_1_content.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/icons/logo4.png\"/></p></body></html>", None))
         self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.page_home), QCoreApplication.translate("MainWindow", u"Home", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">CADASTRO</span></p></body></html>", None))
+        self.lineEdit_cep.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CEP", None))
         self.lineEdit_cnpj.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CNPJ", None))
         self.lineEdit_razao_social.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Raz\u00e3o Social", None))
+        self.lineEdit_uf.setPlaceholderText(QCoreApplication.translate("MainWindow", u"UF", None))
+        self.lineEdit_email.setPlaceholderText(QCoreApplication.translate("MainWindow", u"E-Mail", None))
+        self.lineEdit_telefone.setInputMask("")
+        self.lineEdit_telefone.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Telefone", None))
+        self.lineEdit_municipio.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Munic\u00edpio", None))
         self.lineEdit_logradouro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Logradouro", None))
         self.lineEdit_numero.setPlaceholderText(QCoreApplication.translate("MainWindow", u"N\u00famero", None))
         self.lineEdit_complemento.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Complemento", None))
         self.lineEdit_bairro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Bairro", None))
-        self.lineEdit_municipio.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Munic\u00edpio", None))
-        self.lineEdit_uf.setPlaceholderText(QCoreApplication.translate("MainWindow", u"UF", None))
-        self.lineEdit_cep.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CEP", None))
-        self.lineEdit_telefone.setInputMask("")
-        self.lineEdit_telefone.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Telefone", None))
-        self.lineEdit_email.setPlaceholderText(QCoreApplication.translate("MainWindow", u"E-Mail", None))
-        self.pushButton_cadastrar.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
+        self.btn_cadastrar_2.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.pushButton_limpar.setText(QCoreApplication.translate("MainWindow", u"Limpar", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_1), QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:600;\">LISTA</span></p></body></html>", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem = self.tb_company.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"CNPJ", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1 = self.tb_company.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"RAZ\u00c3O SOCIAL", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2 = self.tb_company.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"LOGRADOURO", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3 = self.tb_company.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"N\u00daMERO", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4 = self.tb_company.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"COMPLEMENTO", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem5 = self.tb_company.horizontalHeaderItem(5)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"BAIRRO", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem6 = self.tb_company.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"MUNIC\u00cdPIO", None));
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
+        ___qtablewidgetitem7 = self.tb_company.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"UF", None));
-        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
+        ___qtablewidgetitem8 = self.tb_company.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"CEP", None));
-        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(9)
+        ___qtablewidgetitem9 = self.tb_company.horizontalHeaderItem(9)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
-        ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(10)
+        ___qtablewidgetitem10 = self.tb_company.horizontalHeaderItem(10)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"EMAIL", None));
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Gerar Excel", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
