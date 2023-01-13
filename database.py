@@ -66,8 +66,7 @@ class Data_base:
     
     def update_company(self, fullDataSet):
         cursor = self.connection.cursor()
-        cursor.execute(f"""
-            UPDATE Empresas set
+        cursor.execute(f""" UPDATE Empresas set
             CNPJ = '{fullDataSet[0]}',
             RAZAO_SOCIAL = '{fullDataSet[1]}',
             LOGRADOURO = '{fullDataSet[2]}',
@@ -79,6 +78,6 @@ class Data_base:
             CEP = '{fullDataSet[8]}',
             TELEFONE = '{fullDataSet[9]}',
             EMAIL = '{fullDataSet[10]}'
-            WHERE CNPJ = '{fullDataSet[0]}
-        """)
+            WHERE CNPJ = '{fullDataSet[0]}' """)
+        
         self.connection.commit()

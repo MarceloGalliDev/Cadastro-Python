@@ -32,7 +32,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         ### BUTTONS ###
         self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
-        self.btn_alterar.clicked.connect(self.update_company)
+        self.btn_alterar.clicked.connect(self.atualizar_empresas)
+        self.btn_excluir.clicked.connect(self.delete_empresas)
         ###############  
 
         ### FUNCTIONS SEARCH ###
@@ -95,7 +96,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if resp == "OK":
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)
-            msg.setWindowTitle("Cadastro Realizado")
+            msg.setWindowTitle("Cadastro")
             msg.setText("Cadastro realizado com sucesso!")
             msg.exec()
             db.close_connection()
@@ -127,7 +128,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     ##############  
     
     ### UPDATE ###
-    def update_company(self):
+    def atualizar_empresas(self):
         dados = []
         update_dados = []
         
@@ -145,16 +146,46 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             db.update_company(tuple(emp))
             
         db.close_connection()
-        
+               
         msg = QMessageBox()
-        msg.setIcon(QMessageBox.information)
+        msg.setIcon(QMessageBox.Information)
         msg.setWindowTitle("Atualização de dados")
-        msg.setText("Dados atualizados com sucesso!")
+        msg.setText("Atualização realizada com sucesso!")
         msg.exec()
         
         self.tb_company.reset()
         self.buscar_empresas()
     ##############  
+    
+    ### DELETE ###
+    def delete_empresas(self):
+        db = Data_base()
+        db.connect()
+        
+        msg = QMessageBox()
+        msg.setWindowTitle("Excluir")
+        msg.setText("Este registro será excluído!")
+        msg.setInformativeText("Você tem certeza que deseja excluir esse registro?")
+        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        resp = msg.exec()
+        
+        if resp == QMessageBox.Yes:
+            cnpj = self.tb_company.selectionModel().currentIndex().siblingAtColumn(0).data()
+            result = db.delete_companies(cnpj)
+            self.buscar_empresas()
+            
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle("Excluir")
+            msg.setText(result)
+            msg.exec()
+            
+            
+            db.close_connection()
+        
+        db.close_connection()
+    
+    ##############
         
 if __name__ == "__main__":
     
