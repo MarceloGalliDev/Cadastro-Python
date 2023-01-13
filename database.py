@@ -78,7 +78,7 @@ class Data_base:
             UF = '{fullDataSet[7]}',
             CEP = '{fullDataSet[8]}',
             TELEFONE = '{fullDataSet[9]}',
-            EMAIL = '{fullDataSet[10]}',
+            EMAIL = '{fullDataSet[10]}'
             WHERE CNPJ = '{fullDataSet[0]}
         """)
         self.connection.commit()

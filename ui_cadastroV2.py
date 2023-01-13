@@ -601,12 +601,12 @@ class Ui_MainWindow(object):
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.verticalLayout_10 = QVBoxLayout(self.frame_3)
         self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.pushButton = QPushButton(self.frame_3)
-        self.pushButton.setObjectName(u"pushButton")
-        sizePolicy.setHeightForWidth(self.pushButton.sizePolicy().hasHeightForWidth())
-        self.pushButton.setSizePolicy(sizePolicy)
-        self.pushButton.setMinimumSize(QSize(0, 30))
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
+        self.btn_gerar_excel = QPushButton(self.frame_3)
+        self.btn_gerar_excel.setObjectName(u"btn_gerar_excel")
+        sizePolicy.setHeightForWidth(self.btn_gerar_excel.sizePolicy().hasHeightForWidth())
+        self.btn_gerar_excel.setSizePolicy(sizePolicy)
+        self.btn_gerar_excel.setMinimumSize(QSize(0, 30))
+        self.btn_gerar_excel.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -616,12 +616,12 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_10.addWidget(self.pushButton)
+        self.verticalLayout_10.addWidget(self.btn_gerar_excel)
 
-        self.pushButton_2 = QPushButton(self.frame_3)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(0, 30))
-        self.pushButton_2.setStyleSheet(u"QPushButton{\n"
+        self.btn_alterar = QPushButton(self.frame_3)
+        self.btn_alterar.setObjectName(u"btn_alterar")
+        self.btn_alterar.setMinimumSize(QSize(0, 30))
+        self.btn_alterar.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -631,12 +631,12 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_10.addWidget(self.pushButton_2)
+        self.verticalLayout_10.addWidget(self.btn_alterar)
 
-        self.pushButton_3 = QPushButton(self.frame_3)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setMinimumSize(QSize(0, 30))
-        self.pushButton_3.setStyleSheet(u"QPushButton{\n"
+        self.btn_excluir = QPushButton(self.frame_3)
+        self.btn_excluir.setObjectName(u"btn_excluir")
+        self.btn_excluir.setMinimumSize(QSize(0, 30))
+        self.btn_excluir.setStyleSheet(u"QPushButton{\n"
 "	background-color: rgb(242, 98, 15);\n"
 "	border-radius: 10px;\n"
 "}\n"
@@ -646,7 +646,7 @@ class Ui_MainWindow(object):
 "	border-radius: 10px;\n"
 "}")
 
-        self.verticalLayout_10.addWidget(self.pushButton_3)
+        self.verticalLayout_10.addWidget(self.btn_excluir)
 
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -753,7 +753,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.toolBox.setCurrentIndex(0)
-        self.tabWidget_content.setCurrentIndex(0)
+        self.tabWidget_content.setCurrentIndex(1)
         self.tabWidget.setCurrentIndex(1)
 
 
@@ -812,9 +812,9 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
         ___qtablewidgetitem10 = self.tb_company.horizontalHeaderItem(10)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"EMAIL", None));
-        self.pushButton.setText(QCoreApplication.translate("MainWindow", u"Gerar Excel", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
+        self.btn_gerar_excel.setText(QCoreApplication.translate("MainWindow", u"Gerar Excel", None))
+        self.btn_alterar.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
+        self.btn_excluir.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), QCoreApplication.translate("MainWindow", u"Lista", None))
         self.tabWidget_content.setTabText(self.tabWidget_content.indexOf(self.page_cadastrar), QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/icons/whatsApp.png\"/><span style=\" font-size:24pt; vertical-align:super;\">(44)99999-9999</span></p><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/icons/icons/Youtube.png\"/><span style=\" font-size:18pt;\"/><span style=\" font-size:24pt; vertical-align:super;\">/marcelogalli</span></p><p align=\"center\"><br/></p><p align=\"center\"><img src=\":/icons/icons/email.png\"/><span style=\" font-size:24pt; vertical-align:super;\">marcelolemesgalli@hotmail.com</span></p></body></html>", None))

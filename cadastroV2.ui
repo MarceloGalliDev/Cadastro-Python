@@ -551,7 +551,7 @@ QWidget{
 </string>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
                <property name="elideMode">
                 <enum>Qt::ElideRight</enum>
@@ -1259,7 +1259,7 @@ QPushButton:hover{
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_10">
                            <item>
-                            <widget class="QPushButton" name="pushButton">
+                            <widget class="QPushButton" name="btn_gerar_excel">
                              <property name="sizePolicy">
                               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                                <horstretch>0</horstretch>
@@ -1289,7 +1289,7 @@ QPushButton:hover{
                             </widget>
                            </item>
                            <item>
-                            <widget class="QPushButton" name="pushButton_2">
+                            <widget class="QPushButton" name="btn_alterar">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>
@@ -1313,7 +1313,7 @@ QPushButton:hover{
                             </widget>
                            </item>
                            <item>
-                            <widget class="QPushButton" name="pushButton_3">
+                            <widget class="QPushButton" name="btn_excluir">
                              <property name="minimumSize">
                               <size>
                                <width>0</width>

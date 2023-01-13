@@ -32,6 +32,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         ### BUTTONS ###
         self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
+        self.btn_alterar.clicked.connect(self.update_company)
         ###############  
 
         ### FUNCTIONS SEARCH ###
@@ -131,7 +132,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         update_dados = []
         
         for row in range(self.tb_company.rowCount()):
-            for column in range(self.tb_company.colorCount()):
+            for column in range(self.tb_company.columnCount()):
                 dados.append(self.tb_company.item(row, column).text())
                 
             update_dados.append(dados)
