@@ -34,6 +34,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_cadastrar_2.clicked.connect(self.cadastrar_empresas)
         self.btn_alterar.clicked.connect(self.atualizar_empresas)
         self.btn_excluir.clicked.connect(self.delete_empresas)
+        self.pushButton_limpar.clicked.connect(self.limpar_form)
         ###############  
 
         ### FUNCTIONS SEARCH ###
@@ -93,14 +94,29 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         )
 
         resp = db.register_company(fullDataSet)
+
+        self.buscar_empresas()
+                        
         if resp == "OK":
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Information)
             msg.setWindowTitle("Cadastro")
             msg.setText("Cadastro realizado com sucesso!")
-            msg.exec()
+            msg.exec()           
             db.close_connection()
-            return
+            
+            self.lineEdit_cnpj.clear(),
+            self.lineEdit_razao_social.clear(),
+            self.lineEdit_logradouro.clear(),
+            self.lineEdit_numero.clear(),
+            self.lineEdit_complemento.clear(),
+            self.lineEdit_bairro.clear(),
+            self.lineEdit_municipio.clear(),
+            self.lineEdit_uf.clear(),
+            self.lineEdit_cep.clear(),
+            self.lineEdit_telefone.clear(),
+            self.lineEdit_email.clear()  
+            return         
         else:
             msg = QMessageBox()
             msg.setIcon(QMessageBox.Critical)
@@ -110,6 +126,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             db.close_connection()
             return
     #################
+    
+    ### LIMPAR ###
+    def limpar_form(self):
+        self.lineEdit_cnpj.clear()        
+        self.lineEdit_razao_social.clear(),
+        self.lineEdit_logradouro.clear(),
+        self.lineEdit_numero.clear(),
+        self.lineEdit_complemento.clear(),
+        self.lineEdit_bairro.clear(),
+        self.lineEdit_municipio.clear(),
+        self.lineEdit_uf.clear(),
+        self.lineEdit_cep.clear(),
+        self.lineEdit_telefone.clear(),
+        self.lineEdit_email.clear()  
+    ##############
     
     ### BUSCAR ###
     def buscar_empresas(self):
@@ -166,7 +197,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         msg.setWindowTitle("Excluir")
         msg.setText("Este registro será excluído!")
         msg.setInformativeText("Você tem certeza que deseja excluir esse registro?")
-        msg.setStandardButtons(QMessageBox.Yes | QMessageBox.No)
+        msg.setStandardButtons(QMessageBox.No | QMessageBox.Yes)
         resp = msg.exec()
         
         if resp == QMessageBox.Yes:
@@ -184,7 +215,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             db.close_connection()
         
         db.close_connection()
-    
     ##############
         
 if __name__ == "__main__":
