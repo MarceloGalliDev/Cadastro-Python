@@ -5,6 +5,7 @@ from ui_cadastroV2 import Ui_MainWindow
 import sys
 from ui_functions import consulta_cnpj
 from database import Data_base
+import pandas as pd
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -35,6 +36,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_alterar.clicked.connect(self.atualizar_empresas)
         self.btn_excluir.clicked.connect(self.delete_empresas)
         self.pushButton_limpar.clicked.connect(self.limpar_form)
+        self.btn_gerar_excel.clicked.connect(self.gerar_excel)
         ###############  
 
         ### FUNCTIONS SEARCH ###
@@ -216,7 +218,31 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         
         db.close_connection()
     ##############
+    
+    ### GERAR EXCEL ###
+    def gerar_excel(self):
+        dados = []
+        all_dados = []
         
+        for row in range(self.tb_company.rowCount()):
+            for column in range(self.tb_company.columnCount()):
+                dados.append(self.tb_company.item(row, column).text())
+        
+            all_dados.append(dados)
+            dados = []
+
+        columns = ['CNPJ', 'RAZAO_SOCIAL', 'LOGRADOURO','NUMERO', 'COMPLEMENTO', 'BAIRRO', 'MUNICIPIO', 'UF', 'CEP', 'TELEFONE', 'EMAIL']
+        
+        empresas = pd.DataFrame(all_dados, columns=columns)
+        empresas.to_excel("Empresas.xlsx", sheet_name="empresas", index=False)
+        
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Exccel")
+        msg.setText("Relatório excel gerado com sucesso!")
+        msg.exec()                       
+    ###################
+
 if __name__ == "__main__":
     
     db = Data_base()
