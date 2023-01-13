@@ -551,7 +551,7 @@ QWidget{
 </string>
                </property>
                <property name="currentIndex">
-                <number>1</number>
+                <number>0</number>
                </property>
                <property name="elideMode">
                 <enum>Qt::ElideRight</enum>
@@ -1181,10 +1181,9 @@ QPushButton:hover{
                          <widget class="QTableWidget" name="tb_company">
                           <property name="styleSheet">
                            <string notr="true">QTableView {
-	background-color: rgb(255,255,255);
-	color: rgb(0,0,0,);
+	background-color:rgb(255,255,255);
+	color: rgb(0,0,0);
 }
-
 </string>
                           </property>
                           <column>

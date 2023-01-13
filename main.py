@@ -114,9 +114,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         db = Data_base()
         db.connect()
         result = db.select_all_companies()
-        
-        print(result)
-        
+              
         self.tb_company.clearContents()
         self.tb_company.setRowCount(len(result))
         
@@ -125,8 +123,37 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.tb_company.setItem(row, column, QTableWidgetItem(str(data)))
         
         db.close_connection()
+    ##############  
+    
+    ### UPDATE ###
+    def update_company(self):
+        dados = []
+        update_dados = []
         
-    ##############    
+        for row in range(self.tb_company.rowCount()):
+            for column in range(self.tb_company.colorCount()):
+                dados.append(self.tb_company.item(row, column).text())
+                
+            update_dados.append(dados)
+            dados = []
+            
+        db = Data_base()
+        db.connect()
+        
+        for emp in update_dados:
+            db.update_company(tuple(emp))
+            
+        db.close_connection()
+        
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.information)
+        msg.setWindowTitle("Atualização de dados")
+        msg.setText("Dados atualizados com sucesso!")
+        msg.exec()
+        
+        self.tb_company.reset()
+        self.buscar_empresas()
+    ##############  
         
 if __name__ == "__main__":
     
