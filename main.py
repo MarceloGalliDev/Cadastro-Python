@@ -6,6 +6,7 @@ import sys
 from ui_functions import consulta_cnpj
 from database import Data_base
 import pandas as pd
+import sqlite3
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -240,7 +241,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         msg.setIcon(QMessageBox.Information)
         msg.setWindowTitle("Exccel")
         msg.setText("Relatório excel gerado com sucesso!")
-        msg.exec()                       
+        msg.exec()      
+        
+    def gerar_excel_2(self):
+        cnx = sqlite3.connect("system.db")
+        
+        empresas = pd.read_sql_query("""SELECT * FROM Empresas""", cnx) 
+        empresas.to_excel("Empresas.xlsx", sheet_name="empresas", index=False)
+        
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Exccel")
+        msg.setText("Relatório excel gerado com sucesso!")
+        msg.exec()                  
     ###################
 
 if __name__ == "__main__":

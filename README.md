@@ -8,7 +8,9 @@
 >>List of sheets commands
 https://doc.qt.io/qt-6/stylesheet-reference.html#list-of-sub-controls
 
-
 >> DEBUGGER
     - F5 para iniciar, mas é necessário marcar a linha desejada
     - F10 ele pula linha a linha
+
+>> Gerando EXE
+    - pyinstaller.exe --onefile --windowed --icon=icon_main.png main.py
