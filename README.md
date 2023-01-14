@@ -14,3 +14,5 @@ https://doc.qt.io/qt-6/stylesheet-reference.html#list-of-sub-controls
 
 >> Gerando EXE
     - pyinstaller.exe --onefile --windowed --icon=icon_main.png main.py
+
+    
