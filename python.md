@@ -13,3 +13,5 @@
 # Pandas
   - tabelas = pd.read_csv(r"caminho") = o r dentro do () é para o python ler exatamente como está escrito
   - tabelas = pd.read_csv(r"caminho", sep=";") = sep para usar separador para compilar a tabela
+
+  - tabela["nome_coluna"].sum()
