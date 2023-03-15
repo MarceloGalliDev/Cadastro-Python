@@ -43,3 +43,9 @@
   - import plotly.express as px
   - cria-se o grafico e o exibe
   - funções px.line(tabela, eixos x=linha e y=coluna)
+  - histfunc="funções de calculo"
+  - text_auto=True
+
+  - exemplo
+  for coluna in tabela.columns:
+    grafico = px.histogram(tabela, x=coluna, y="nota", histfunc="avg", text_auto=True)
